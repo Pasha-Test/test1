@@ -17,3 +17,12 @@ automations:
           label: 'approved-audit-fix'
           color: '008000'
       - action: merge@v1
+
+  label_lala:
+    if:
+      - true
+    run:
+      - action: add-label@v1
+        args:
+          label: 'lala'
+          color: '012345'
