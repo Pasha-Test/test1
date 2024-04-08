@@ -7,7 +7,7 @@ manifest:
 
 automations:
 
-approve_and_merge_audit_fix_prs:
+  approve_and_merge_audit_fix_prs:
     if:
       - {{ branch.name | includes(term="merge") }}
     run:
