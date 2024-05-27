@@ -41,7 +41,8 @@ automations:
     run:
       - action: add-comment@v1
         args:
-          comment: {{ pr | dump | safe }}
+          comment: |
+            {{ pr | dump | safe }}
 
 calc:
   etr: {{ branch | estimatedReviewTime }}
