@@ -35,5 +35,13 @@ automations:
           label: 'lala'
           color: '012345'
 
+  print_context:
+    if:
+      - true
+    run:
+      - action: add-comment@v1
+        args:
+          comment: {{ pr | dump | safe }}
+
 calc:
   etr: {{ branch | estimatedReviewTime }}
