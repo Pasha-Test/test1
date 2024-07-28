@@ -32,7 +32,7 @@ automations:
     run:
       - action: add-label@v1
         args:
-          label: 'lala'
+          label: 'lala1'
           color: '012345'
 
   print_context:
