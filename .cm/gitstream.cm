@@ -26,6 +26,16 @@ automations:
           color: '008000'
       - action: merge@v1
 
+  approve_prs:
+    if:
+      - {{ branch.name | includes(term="approve") }}
+    run:
+      - action: approve@v1
+      - action: add-label@v1
+        args:
+          label: 'approved'
+          color: '008080'
+
   label_lala:
     if:
       - true
